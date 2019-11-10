@@ -21,7 +21,6 @@ class PetsController < ApplicationController
   end
 
   get '/pets/:id' do
-    binding.pry
     @pet = Pet.create(owner: @owner)
 
     erb :'/pets/show'
