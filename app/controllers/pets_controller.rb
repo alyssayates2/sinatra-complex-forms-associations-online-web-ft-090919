@@ -8,7 +8,7 @@ class PetsController < ApplicationController
   get '/pets/new' do
     @owners = Owner.all
     @pet = Pet.create(params[:pet])
-
+    @owner = Owner.create(params[:owner])
     erb :'/pets/new'
   end
 
