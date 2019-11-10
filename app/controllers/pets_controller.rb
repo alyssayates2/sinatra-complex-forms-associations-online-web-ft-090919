@@ -20,7 +20,7 @@ class PetsController < ApplicationController
     end
     @pet.save
     redirect "pets/#{@pet.id}"
-  end
+
 
   get '/pets/:id' do
     @pet = Pet.find_by_id(params[:id])
